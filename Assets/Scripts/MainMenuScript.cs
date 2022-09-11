@@ -31,7 +31,7 @@ public class MainMenuScript : MonoBehaviour
 
         //inits the listeners
         playButton.onClick.AddListener(delegate { LoadSceneByNumber(0); });
-        settingsButton.onClick.AddListener(delegate { LoadSceneByNumber(0); });
+        settingsButton.onClick.AddListener(delegate { LoadSceneByNumber(1); });
         quitButton.onClick.AddListener(delegate { QuitButtonCallback(); });
     }
 
