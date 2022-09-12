@@ -30,7 +30,7 @@ public class MainMenuScript : MonoBehaviour
         quitButton = GameObject.Find("quitButton").GetComponent<Button>();
 
         //inits the listeners
-        playButton.onClick.AddListener(delegate { LoadSceneByNumber(0); });
+        playButton.onClick.AddListener(delegate { LoadSceneByNumber(2); });
         settingsButton.onClick.AddListener(delegate { LoadSceneByNumber(1); });
         quitButton.onClick.AddListener(delegate { QuitButtonCallback(); });
     }
@@ -38,6 +38,8 @@ public class MainMenuScript : MonoBehaviour
 
     //Callback funtion for moving in between scenes
     //0 = menu
+    //1 = settings
+    //2 = game
     public void LoadSceneByNumber(int SceneNumber)
     {
         Debug.Log("Scene Number index to be loaded is " + SceneNumber);
