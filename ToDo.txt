@@ -1,5 +1,6 @@
 -Game scene
 -settings (back button doesnt like me and need to actually add settings)
+-wrapping effect to the boundary script
 
 
 maybe cool features to add
