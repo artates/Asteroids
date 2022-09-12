@@ -1,0 +1,7 @@
+-Game scene
+-settings (back button doesnt like me and need to actually add settings)
+
+
+maybe cool features to add
+-high score screen
+-different assets
