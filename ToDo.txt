@@ -1,7 +1,8 @@
 -Game scene
 -settings (back button doesnt like me and need to actually add settings)
 -wrapping effect to the boundary script
-
+-add scene before game that shows controls
+-mess with player controller(maybe player size)
 
 maybe cool features to add
 -high score screen
