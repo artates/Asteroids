@@ -7,6 +7,7 @@ using UnityEngine;
  */
 public class Boundaries : MonoBehaviour
 {
+    public Camera MainCamera;
     private Vector2 screenBounds;
     private float objWidth, objHeight;
 
@@ -15,11 +16,12 @@ public class Boundaries : MonoBehaviour
     {
         //calculates the screen bounds on start, gives x and y value that are half of the screen width and height,
         //but are negative due to screen coordinate system being opposite of the world coordinate system
-        screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
+        screenBounds = MainCamera.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, MainCamera.transform.position.z));
 
         //calculates the boundaries of the sprite /2
-        objWidth = transform.GetComponent<SpriteRenderer>().bounds.size.x / 2;
-        objHeight = transform.GetComponent<SpriteRenderer>().bounds.size.y / 2;
+        objWidth = transform.GetComponent<SpriteRenderer>().bounds.extents.x;
+        objHeight = transform.GetComponent<SpriteRenderer>().bounds.extents.y;
+        
     }
 
     // Lateupdate called after movement 
@@ -28,8 +30,19 @@ public class Boundaries : MonoBehaviour
         //*** this is an initial solution but need to implement wrapping 
         //calculates new player position and clamps it within the screen
         Vector3 viewPos = transform.position;
-        viewPos.x = Mathf.Clamp(viewPos.x, screenBounds.x + objWidth, -screenBounds.x - objWidth);
-        viewPos.y = Mathf.Clamp(viewPos.y, screenBounds.y + objHeight, -screenBounds.y - objHeight);
+        viewPos.x = Mathf.Clamp(viewPos.x, -1 * screenBounds.x + objWidth, screenBounds.x - objWidth);
+        viewPos.y = Mathf.Clamp(viewPos.y, -1 * screenBounds.y + objHeight, screenBounds.y - objHeight);
+
+        //if (viewPos.x < -1 * screenBounds.x || viewPos.x > screenBounds.x )
+        //{
+        //    viewPos.x = viewPos.x * -1;
+        //}
+        //if (viewPos.y < -1 * screenBounds.y  || viewPos.y > screenBounds.y )
+        //{
+        //    viewPos.y = viewPos.y * -1;
+        //}
+
+
         transform.position = viewPos;
     }
 }
