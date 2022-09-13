@@ -16,12 +16,22 @@ public class PlayerController : MonoBehaviour
     public float thrustS = 1.0f;
     public float turnS = 1.0f;
 
+    //bullet vars
+    public Bullet bulletPrefab;
+
     //used to initialize the rigid body
     private void Awake()
     {
         rigidB = GetComponent<Rigidbody2D>();
     }
     //updates every frame, used for checking button presses
+    /*
+     * current list of inputs to later put in control screen
+     * W and Uparrow for thrust
+     * A & LA and D & RA for turning
+     * *may want to add a stop on S or DA
+     * space and keypad and left click enter for fire
+     */
     private void Update()
     {
         thrust = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow);
@@ -39,6 +49,12 @@ public class PlayerController : MonoBehaviour
         }
         else turn = 0.0f;
 
+        //handles the firing on spacebar or keypad enter
+        if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetMouseButtonDown(0))
+        {
+            Fire();
+        }
+
     }
 
     //implements the keystrokes on the player object
@@ -53,5 +69,13 @@ public class PlayerController : MonoBehaviour
         {
             rigidB.AddTorque(turn * this.turnS);
         }
+    }
+
+    //method to handle the firing of the gun
+    private void Fire()
+    {
+        Vector3 pos = (this.transform.position + this.transform.up /3) ;
+        Bullet bullet = Instantiate(this.bulletPrefab, pos , this.transform.rotation); //initiates the bullet, (prefab to use, player position, player roation)this.transform.position 
+        bullet.Direction(this.transform.up); //calls direction method in bullet, uses the "forward" direction from player as the vector2 arg
     }
 }
