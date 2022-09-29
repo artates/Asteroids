@@ -8,3 +8,35 @@
 maybe cool features to add
 -high score screen
 -different assets
+
+Timeline:
+Programming
+-asteroid spawning
+-asteroid destroying
+-player dying
+-scoring
+-----
+-modes/powerups
+-supporting extra inputs
+
+Game stuff 
+once programming is done
+- updated game ui
+-controls screen
+-modes
+-settings
+-graphics modes
+
+Art
+-base assets
+-wacky assets
+-modern assets
+
+
+---
+Things that need tinkering with
+-screen wrapping feature
+-player controller probably
+
+
+stopped at 58

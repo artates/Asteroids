@@ -40,7 +40,7 @@ public class ScreenC : MonoBehaviour
         //goes bottom
         if (transform.position.y < botCon - buffer)
         {
-            transform.position = new Vector3(transform.position.x,topCon + buffer, transform.position.z);
+            transform.position = new Vector3(transform.position.x ,topCon + buffer, transform.position.z);
         }
 
         //goes top
@@ -50,9 +50,5 @@ public class ScreenC : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 }
