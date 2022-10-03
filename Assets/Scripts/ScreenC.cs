@@ -9,7 +9,7 @@ public class ScreenC : MonoBehaviour
     float rightCon = Screen.width;
     float topCon = Screen.height;
     float botCon = Screen.height;
-    float buffer = 0.0f;
+    float buffer = 00.0f;
     float distanceZ;
     Camera MainCamera;
     // Start is called before the first frame update
@@ -26,15 +26,15 @@ public class ScreenC : MonoBehaviour
     private void FixedUpdate()
     {
         //goes left
-        if (transform.position.x < leftCon - buffer)
+        if (transform.position.x <= leftCon - buffer)
         {
-            transform.position = new Vector3(leftCon - 0.10f, transform.position.y, transform.position.z);
+            transform.position = new Vector3(rightCon - 0.10f, transform.position.y, transform.position.z);
         }
 
         //goes right
-        if (transform.position.x > rightCon)
+        if (transform.position.x >= rightCon)
         {
-            transform.position = new Vector3(rightCon, transform.position.y, transform.position.z);
+            transform.position = new Vector3(leftCon, transform.position.y, transform.position.z);
         }
 
         //goes bottom

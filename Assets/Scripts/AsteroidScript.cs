@@ -12,13 +12,13 @@ public class AsteroidScript : MonoBehaviour
     //size var, might want to make some getters and setters for the public vars to make them private
     public float size = 1.0f;
     public float minSize = 0.5f;
-    public float maxSize = 2.0f; //maybe switch to 1.5
+    public float maxSize = 3.0f; //maybe switch to 1.5
     public Sprite[] sprites; //array of sprites. assigned from the editor to be chosen at random
     private SpriteRenderer spriteRenderer; //used for switching the sprites
     private Rigidbody2D rigidBody; //used for manipulating the physics of the asteroid
     //for set trajectory
     private float speed = 50.0f;
-    private float maxLife = 500.0f; //maybe less
+    private float maxLife = 20.0f; //maybe less, try and keep the same as spawn rate or close to
 
    
 

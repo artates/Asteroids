@@ -238,7 +238,6 @@ MonoBehaviour:
   thrustS: 5
   turnS: 0.5
   bulletPrefab: {fileID: 3021550841323134922, guid: d285eea9f9c45ac408d15b2b1c18eb91, type: 3}
-  screenBounds: {fileID: 1029295802}
 --- !u!61 &203988128
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -398,7 +397,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1029295802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -450,7 +449,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1029295801}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.9510182, y: 1.2531469, z: -0.46600008}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
