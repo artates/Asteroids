@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     public Bullet bulletPrefab;
 
     //for screen bounds ***
-    public ScreenBounds screenBounds;
+    //public ScreenBounds screenBounds;
 
     //used to initialize the rigid body
     private void Awake()
@@ -59,11 +59,11 @@ public class PlayerController : MonoBehaviour
         }
 
         //for screen bounds ****
-        if (screenBounds.isOutOfBounds(transform.localPosition))
-        {
-            Vector2 newPos = screenBounds.CalculateWrappedPosistion(transform.localPosition);
-            transform.position = newPos;
-        }
+        //if (screenBounds.isOutOfBounds(transform.localPosition))
+        //{
+           // Vector2 newPos = screenBounds.CalculateWrappedPosistion(transform.localPosition);
+            //transform.position = newPos;
+        //}
     }
 
     //implements the keystrokes on the player object
