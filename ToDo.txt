@@ -37,6 +37,12 @@ Art
 Things that need tinkering with
 -screen wrapping feature
 -player controller probably
+-asteroid destruction angles
 
 
 stopped at 58
+changelog:
+added destruction of asteroids 
+and their splitting( in the asteroid script )
+changed spawn frequency of asteroids.
+speed after split to be looked at

@@ -49,6 +49,38 @@ public class AsteroidScript : MonoBehaviour
         Destroy(this.gameObject, this.maxLife);
     }
 
-   
-    
+    //collision handler
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //check what is colliding with asteroid(bullet or asteroid)
+        if(collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "Player")
+        {
+            //if the split asteroids are within our 
+            if(this.size * .5f >= this.minSize)
+            {
+                CreateSplit();
+                //maybe dont wanna do 2 CreateSplit();
+            }
+            Destroy(this.gameObject); //always destroys asteroid
+        }
+    }
+
+    //splits the asteroid
+    private void CreateSplit()
+    {
+        Vector2 positionOffset = Random.insideUnitCircle * 0.5f;
+        Vector2 trajectory = Random.insideUnitCircle.normalized;
+        Vector2 position = this.transform.position;
+        position += positionOffset;
+        Vector2 position2 = this.transform.position;
+        position2 -= positionOffset;
+
+        AsteroidScript half = Instantiate(this, position, this.transform.rotation); //mess with this to change how we spawn
+        half.size = this.size * 0.5f;
+        half.SetTrajectory(trajectory * this.speed * 0.3f);
+
+        AsteroidScript half2 = Instantiate(this, position2, this.transform.rotation); //mess with this to change how we spawn
+        half2.size = this.size * 0.5f;
+        half2.SetTrajectory(-trajectory * this.speed * 0.3f);
+    }
 }

@@ -7,8 +7,8 @@ public class AsteroidSpawner : MonoBehaviour
     //prefab for spawning
     public AsteroidScript asteroidPrefab;
 
-    private float initSpawn = 3.0f;
-    private float spawnRate = 20.0f;
+    private float initSpawn = 2.0f;
+    private float spawnRate = 15.0f;
     private int spawnAmount = 1;
     private float spawnDistance = 9.0f; //this is a hard code number, I want to change this to be relative to the screen bounds, maybe screen.width, screen.height
     private float trajectoryVarience = 15.0f;
