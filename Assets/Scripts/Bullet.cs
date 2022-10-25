@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour
 {
     private Rigidbody2D rigidB;
     private float pSpeed = 600.0f; //projectile speed
-    private float mLife = 10.0f; //projectile lifetime
+    private float mLife = 1.5f; //projectile lifetime
 
 
     private void Awake()
