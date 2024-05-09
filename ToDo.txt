@@ -4,6 +4,7 @@
 -add scene before game that shows controls
 -mess with player controller(maybe player size)
 -add ui over game and pause screen
+-upgrade Menus with better graphics(Have asteroids fly across the screen 
 
 maybe cool features to add
 -high score screen
