@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class MainMenuScript : MonoBehaviour
 {
     //inits all buttons on the main menu, add more inits here if main menu grows
-    public Button playButton, settingsButton, quitButton;
+    public Button playButton, controlsButton, quitButton;
 
 
 
@@ -26,19 +26,19 @@ public class MainMenuScript : MonoBehaviour
     {
         //inits buttons
         playButton = GameObject.Find("playButton").GetComponent<Button>();
-        settingsButton = GameObject.Find("settingsButton").GetComponent<Button>();
+        controlsButton = GameObject.Find("controlsButton").GetComponent<Button>();
         quitButton = GameObject.Find("quitButton").GetComponent<Button>();
 
         //inits the listeners
         playButton.onClick.AddListener(delegate { LoadSceneByNumber(2); });
-        settingsButton.onClick.AddListener(delegate { LoadSceneByNumber(1); });
+        controlsButton.onClick.AddListener(delegate { LoadSceneByNumber(1); });
         quitButton.onClick.AddListener(delegate { QuitButtonCallback(); });
     }
 
 
     //Callback funtion for moving in between scenes
     //0 = menu
-    //1 = settings
+    //1 = Controls Scene
     //2 = game
     public void LoadSceneByNumber(int SceneNumber)
     {

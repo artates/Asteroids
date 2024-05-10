@@ -536,7 +536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playButton: {fileID: 0}
-  settingsButton: {fileID: 0}
+  controlsButton: {fileID: 0}
   quitButton: {fileID: 0}
 --- !u!4 &592455473
 Transform:
@@ -833,7 +833,7 @@ GameObject:
   - component: {fileID: 1616736466}
   - component: {fileID: 1616736465}
   m_Layer: 5
-  m_Name: settingsButton
+  m_Name: controlsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1274,7 +1274,7 @@ GameObject:
   - component: {fileID: 1964647594}
   - component: {fileID: 1964647593}
   m_Layer: 5
-  m_Name: settingsText
+  m_Name: controlsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1319,7 +1319,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Settings
+  m_text: Controls
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fca0dd46ce617c94d8e9a27c503faa15, type: 2}
   m_sharedMaterial: {fileID: 3048757403766113413, guid: fca0dd46ce617c94d8e9a27c503faa15, type: 2}
@@ -1346,8 +1346,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 55
+  m_fontSizeBase: 55
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

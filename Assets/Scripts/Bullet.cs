@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/*
+ * Script that controls the bullet objects. Handles physics and collisions
+ */
 public class Bullet : MonoBehaviour
 {
     private Rigidbody2D rigidB;
