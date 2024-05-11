@@ -47,3 +47,5 @@ added destruction of asteroids
 and their splitting( in the asteroid script )
 changed spawn frequency of asteroids.
 speed after split to be looked at
+Changed settings screen to be controls and did a first build of controls(need to adjust text anchors)
+Move to game programming and sprite stuff
