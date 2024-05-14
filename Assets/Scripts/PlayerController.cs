@@ -8,7 +8,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    
     //vars for movement
     Rigidbody2D rigidB;
     private bool thrust; 
@@ -87,4 +86,7 @@ public class PlayerController : MonoBehaviour
         Bullet bullet = Instantiate(this.bulletPrefab, pos , this.transform.rotation); //initiates the bullet, (prefab to use, player position, player roation)this.transform.position 
         bullet.Direction(this.transform.up); //calls direction method in bullet, uses the "forward" direction from player as the vector2 arg
     }
+
+    
+
 }

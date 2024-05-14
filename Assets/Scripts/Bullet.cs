@@ -12,11 +12,11 @@ public class Bullet : MonoBehaviour
     private float pSpeed = 600.0f; //projectile speed
     private float mLife = 1.5f; //projectile lifetime
 
-
     private void Awake()
     {
         //inits rigidB to the associated component
         rigidB = GetComponent<Rigidbody2D>();
+
     }
     //sets the direction to be fired. Called by the player object
     public void Direction(Vector2 direction)
@@ -28,6 +28,8 @@ public class Bullet : MonoBehaviour
     //method for handling collisions
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        
         Destroy(this.gameObject);
+       
     }
 }
