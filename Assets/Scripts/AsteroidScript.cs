@@ -61,8 +61,9 @@ public class AsteroidScript : MonoBehaviour
                 CreateSplit();
                 //maybe dont wanna do 2 CreateSplit();
             }
-            Debug.Log("1");
+            Debug.Log("1");//DELETE THIS
             Destroy(this.gameObject); //always destroys asteroid
+            GameUiScript.instance.increaseScore(1);
         }
     }
 
