@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
     public float thrustS = 1.0f;
     public float turnS = 1.0f;
 
+    private Rigidbody2D rigidBody; //used for manipulating the physics of the asteroid
+
     //bullet vars
     public Bullet bulletPrefab;
 
@@ -87,6 +89,16 @@ public class PlayerController : MonoBehaviour
         bullet.Direction(this.transform.up); //calls direction method in bullet, uses the "forward" direction from player as the vector2 arg
     }
 
-    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //check what is colliding with asteroid(bullet or asteroid)
+        if (collision.gameObject.tag == "Asteroid")
+        {
+            GameUiScript.instance.loseLife();
+            Debug.Log("");//DELETE THIS
+            //Destroy(this.gameObject); //always destroys asteroid
+            //GameUiScript.instance.increaseScore(1);
+        }
+    }
 
 }
