@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 76931789}
   - component: {fileID: 76931788}
   m_Layer: 0
-  m_Name: Life 2
+  m_Name: life2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -774,6 +774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+  lives: 0
   scoreText: {fileID: 0}
 --- !u!4 &1250155673
 Transform:
@@ -801,7 +802,7 @@ GameObject:
   - component: {fileID: 1452547776}
   - component: {fileID: 1452547775}
   m_Layer: 0
-  m_Name: Life 1
+  m_Name: life1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -876,7 +877,7 @@ GameObject:
   - component: {fileID: 1503026141}
   - component: {fileID: 1503026140}
   m_Layer: 0
-  m_Name: Life 3
+  m_Name: life3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

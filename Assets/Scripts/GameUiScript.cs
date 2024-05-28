@@ -14,6 +14,9 @@ public class GameUiScript : MonoBehaviour
     public int score, lives;
     public TextMeshProUGUI scoreText;
 
+    //life images
+    Image life1, life2, life3;
+
     //Add vars for high score later
 
     //awake method for making the instance of this class
@@ -29,7 +32,10 @@ public class GameUiScript : MonoBehaviour
         score = 0;
         scoreText = GameObject.Find("scoreText").GetComponent<TextMeshProUGUI>();
         scoreText.text = "Score " + score;
-
+        //init the life images in the UI
+        life1 = GameObject.Find("life1").GetComponent<Image>();
+        life2 = GameObject.Find("life2").GetComponent<Image>();
+        life3 = GameObject.Find("life3").GetComponent<Image>();
         //set lives to 3
         lives =  3;
         
@@ -54,6 +60,14 @@ public class GameUiScript : MonoBehaviour
     {
         //subtract lives by one if game is over lose game over scene
         lives -= 1;
+        if (lives == 2)
+        {
+            life3.enabled = false;
+        }
+        if (lives == 1)
+        {
+            life2.enabled = false;
+        }
         Debug.Log("lives = " +lives);//DELETE THIS
         if ( lives == 0) 
         {
