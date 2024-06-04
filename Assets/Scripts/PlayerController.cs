@@ -17,6 +17,10 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rigidBody; //used for manipulating the physics of the asteroid
 
+    //using these for switching sprites while the player moves
+    public Sprite[] sprites; //array of sprites. assigned from the editor to be chosen at random
+    private SpriteRenderer spriteRenderer; //used for switching the sprites
+
     //bullet vars
     public Bullet bulletPrefab;
 
@@ -27,6 +31,12 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         rigidB = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+    public void Start()
+    {
+        //choose a sprite randomly from the array of sprites
+        spriteRenderer.sprite = sprites[0];
     }
     //updates every frame, used for checking button presses
     /*
@@ -73,6 +83,11 @@ public class PlayerController : MonoBehaviour
         if (thrust)
         {
             rigidB.AddForce(this.transform.up * this.thrustS);
+            spriteRenderer.sprite = sprites[1];
+        }
+        if (!thrust)
+        {
+            spriteRenderer.sprite = sprites[0];
         }
 
         if(turn != 0)

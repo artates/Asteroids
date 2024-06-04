@@ -49,3 +49,7 @@ changed spawn frequency of asteroids.
 speed after split to be looked at
 Changed settings screen to be controls and did a first build of controls(need to adjust text anchors)
 Move to game programming and sprite stuff
+
+Next to do:
+Dying and respawning check YT vid
+adjust spawn values and general tuning 
