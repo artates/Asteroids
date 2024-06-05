@@ -12,16 +12,25 @@ public class AsteroidSpawner : MonoBehaviour
     private int spawnAmount = 1;
     private float spawnDistance = 9.0f; //this is a hard code number, I want to change this to be relative to the screen bounds, maybe screen.width, screen.height
     private float trajectoryVarience = 15.0f;
+
     private void Start()
     {
         //on start will call named method, at the time of the second argument at the rate of the third
         InvokeRepeating(nameof(Spawn),this.initSpawn, this.spawnRate );
+       
     }
+
 
     private void Spawn()
     {
         //changes spawn amount to a random number between 2 and 4
         this.spawnAmount = Random.Range(2, 5);
+
+        //increases the spawn amount when the score reaches more than 20
+        if(GameUiScript.instance.score > 20)
+        {
+            this.spawnAmount = Random.Range(4, 7);
+        }
 
         //logic for actually spawning them
         for ( int i = 0; i < this.spawnAmount; i++)
